@@ -1,0 +1,160 @@
+.footer {
+  background-color: #2d2926; /* Màu nâu đen sang trọng */
+  padding: 80px 8% 40px;
+  margin-top: 0;
+  color: #d6cfad; /* Màu chữ vàng cát đồng bộ Header */
+  font-family: inherit;
+}
+
+.footerMain {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 50px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Xử lý Logo */
+.logoContainer {
+  margin-bottom: 25px;
+  transition: transform 0.3s ease;
+}
+
+.logoContainer:hover {
+  transform: scale(1.05);
+}
+
+.description {
+  line-height: 1.8;
+  opacity: 0.85;
+  font-size: 0.95rem;
+  max-width: 300px;
+}
+
+/* Tiêu đề các cột */
+.columnTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #ffffff; /* Tiêu đề màu trắng cho nổi bật */
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.columnTitle::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #d6cfad;
+  margin-top: 10px;
+}
+
+/* Danh sách link */
+.linkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.linkList li {
+  margin-bottom: 15px;
+}
+
+.linkList li a {
+  color: #d6cfad;
+  text-decoration: none;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.linkList li a:hover {
+  color: #ffffff;
+  opacity: 1;
+  padding-left: 8px; /* Hiệu ứng dịch chuyển nhẹ */
+}
+
+/* Thông tin liên hệ */
+.contactInfo p {
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.contactInfo span {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* --- ICON MẠNG XÃ HỘI --- */
+.socialGroup {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.socialLink {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(214, 207, 173, 0.3);
+  border-radius: 50%;
+  color: #d6cfad;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.socialLink:hover {
+  background-color: #d6cfad; /* Đổi màu nền thành vàng cát */
+  color: #2d2926; /* Icon đổi thành màu nâu đen */
+  border-color: #d6cfad;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* --- DÒNG BẢN QUYỀN --- */
+.footerBottom {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(214, 207, 173, 0.1);
+  margin-bottom: 30px;
+}
+
+.footerBottom p {
+  font-size: 0.8rem;
+  opacity: 0.5;
+  letter-spacing: 2px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+  .footerMain {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footerMain {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .columnTitle::after {
+    margin: 10px auto;
+  }
+  .description {
+    max-width: 100%;
+  }
+  .socialGroup {
+    justify-content: center;
+  }
+}

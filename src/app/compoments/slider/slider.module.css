@@ -1,0 +1,102 @@
+.bannerWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0; /* Khoảng cách trên dưới banner */
+    background-color: #f8fafc; /* Màu nền nhẹ giống body */
+  }
+  
+  .slider {
+    position: relative;
+    width: 1200px;
+    max-width: 95%;
+    /* Xóa height: 480px; đi */
+    aspect-ratio: 1200 / 550; /* Điều chỉnh con số 550 này cho đến khi bạn thấy hết chữ */
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    background-color: #f1ede3; /* Thêm màu nền này để nếu ảnh không khít khung thì nhìn vẫn đẹp */
+  }
+  
+  /* Cho mobile */
+  @media (max-width: 768px) {
+    .slider {
+      height: auto; /* Để chiều cao tự động */
+      aspect-ratio: 1200 / 600; /* Tỷ lệ ảnh trên mobile có thể cần cao hơn một chút */
+    }
+  }
+  .slideContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .slide {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .active {
+    opacity: 1;
+  }
+  
+  .navBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.3s;
+  }
+  
+  .navBtn:hover {
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
+  }
+  
+  .prev { left: 20px; }
+  .next { right: 20px; }
+  
+  .dots {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    z-index: 10;
+  }
+  
+  .dot {
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .dotActive {
+    background: #fff;
+    width: 25px;
+    border-radius: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .slider { height: 200px; }
+  }
+
+  

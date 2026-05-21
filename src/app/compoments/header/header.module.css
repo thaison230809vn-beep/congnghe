@@ -1,0 +1,90 @@
+:root {
+  --bg-color: #d6cfad;      /* Màu nền logo */
+  --text-color: #2d2926;    /* Màu chữ nâu đen */
+  --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.header {
+  width: 100%;
+  background-color: var(--bg-color);
+  padding: 5px 5%;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  /* Thêm đổ bóng nhẹ để Header tách biệt với phần nội dung bên dưới */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoWrapper {
+  transition: var(--transition);
+}
+
+.logoWrapper:hover {
+  transform: scale(1.05); /* Logo phóng to nhẹ khi di chuột */
+}
+
+.nav ul {
+  display: flex;
+  gap: 45px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  position: relative;
+  transition: var(--transition);
+}
+
+/* Hiệu ứng gạch chân sang trọng */
+.nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -6px;
+  left: 0;
+  background-color: var(--text-color);
+  transition: var(--transition);
+}
+
+.nav ul li a:hover::after {
+  width: 100%; /* Gạch chân chạy từ trái sang phải */
+}
+
+.contactBtn {
+  text-decoration: none;
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  padding: 10px 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: var(--transition);
+  background: transparent;
+  display: inline-block;
+}
+
+/* Hiệu ứng đảo ngược màu khi di chuột vào nút Liên Hệ */
+.contactBtn:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}

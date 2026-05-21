@@ -1,0 +1,136 @@
+/* --- Khu vực Main Content --- */
+.item2 {
+  background-color: #d6cfad; /* MÀU GIỐNG HEADER */
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  min-height: 80vh; /* Đảm bảo màu nền kéo dài */
+}
+
+.mainContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 30px;
+  width: 1200px;
+  max-width: 90%;
+}
+
+/* --- Card Sản Phẩm (Giữ nguyên khung trắng) --- */
+.product {
+  background-color: #ffffff; /* GIỮ NGUYÊN MÀU TRẮNG */
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  /* Đổ bóng đậm hơn một chút để nổi bật trên nền vàng cát */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); 
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.mainProduct {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.productImage {
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  position: relative;
+  background: #fff;
+}
+
+.productName {
+  cursor: pointer;
+  margin-bottom: 10px;
+  min-height: 1.5rem;
+}
+
+.nameTruncated {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #2d2926 !important;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.nameFull {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #2d2926 !important;
+  white-space: normal;
+  overflow: visible;
+}
+
+.productPrice {
+  margin-bottom: 16px;
+}
+
+.price {
+  color: #2d2926 !important;
+  font-size: 1.2rem;
+  font-weight: 700;
+  display: block;
+}
+
+.oldPrice {
+  text-decoration: line-through;
+  color: #94a3b8;
+  font-size: 0.8rem;
+  margin-right: 8px;
+}
+
+.percent {
+  color: #ef4444;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: #fef2f2;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.buyButton a {
+  display: block;
+  background-color: #2d2926; /* Màu nâu đen giống chữ Header */
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: opacity 0.3s;
+}
+
+.buyButton a:hover {
+  opacity: 0.9;
+}
+
+.productPlaceholder {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7e7456;
+  font-style: italic;
+  font-size: 0.8rem;
+  border: 1px dashed #2d292644;
+  border-radius: 16px;
+}
